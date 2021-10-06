@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  *{
+      margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    }
+  html,
+  body{
+    height: 100%;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .az{
+    width: 500px;
+    height: 100px;
+    border: 1px solid gray;
+    position: relative;
+    background-image: repeating-linear-gradient(90deg, gray 0, gray 1px, transparent 0, transparent .3cm);
+    background-position: .3cm 0;
+    background-repeat: no-repeat;
+    background-size: 100% 15px;
+  }
+  .az::before{
+    content:"";
+    width: 250px;
+    height: 97px;
+    border: 1px solid gray;
+    background: rgb(238, 238, 131);
+    position: absolute;
+    right:0px;
+    bottom:0px;
+    z-index: -1;
+  }
+  .az::after{
+    content:"";
+    width: 497px;
+    height: 97px;
+    border: 1px solid gray;
+    background:radial-gradient(ellipse 60% 40% at center,rgba(92, 91, 92, 0.4),rgba(248, 244, 247, 0.2));
+    position: absolute;
+    right: 0;
+    bottom:0;
+    z-index: 1;
+  }
+  .bnt{
+    width: 50px;
+    height: 70px;
+    border: .5px solid gray;
+    position: relative;
+    background:linear-gradient(#fff,rgba(201,201,201)70%,#fff);
+  }
+  .bnt::before{
+    content:"";
+    width: 60px;
+    height: 70px;
+    border: .5px solid gray;
+    border-radius: 10%;
+    position: absolute;
+    left:540px;
+    background:linear-gradient(#fff,rgba(201,201,201)70%,#fff);
+    z-index: -1;
+  }
+  .md{
+    width:45px;
+    height: 100px;
+    border: 1px solid gray;
+    border-radius: 10%;
+    position: relative;
+    background:linear-gradient(#fff,rgba(201,201,201)70%,#fff);
+  }
+  .md::before{
+    content: "";
+    width:45px;
+    height: 97px;
+    border: 1px solid black;
+    background: black;
+    position: absolute;
+    left:300px ;
+    bottom: 0;
+    z-index: 2;
+  }
+  .md::after{
+    content: "";
+    width: 100px;
+    height: 0px;
+    border: 1px solid black;
+    position: absolute;
+    left: 646px;
+    bottom: 45px;
+  }
+  p{
+    position:absolute;
+    bottom:0px;
+    padding:0px;
+    margin:0px;
+    color: gray;
+    font-size: 1rem;
+  }
+
+  </style>
+</head>
+<body>
+
+  <div class="md"></div>
+  <div class="bnt"></div>
+  <div class="az"><p>Made in Taiwan</p></div>
+
+
+
+</body>
+</html>
